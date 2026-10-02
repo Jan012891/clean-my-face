@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clean My Face</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><main class="page">
+<section class="hero" id="home"><div class="navwrap"><img class="navimg" src="assets/Asset and Elements/Navbar.png"><div class="navlinks"><a class="logo-link" href="index.html#home" aria-label="Home"></a><a class="home nav-active" href="index.html#home"></a><a class="purpose" href="index.html#about-cleanser"></a><a class="plump" href="plump-it-up.html#home"></a><a class="stay" href="stay-clear.html#home"></a><a class="routine" href="#info"></a></div></div><img class="section-img" src="assets/Asset and Elements/Hero.png"></section>
+<section><img class="section-img" src="assets/Asset and Elements/About us.png"></section>
+<section id="about-cleanser"><img class="section-img" src="assets/Asset and Elements/About Cleanser.png"></section>
+<section><img class="section-img" src="assets/Asset and Elements/Plump it up.png"></section>
+<section><img class="section-img" src="assets/Asset and Elements/Stay Clear.png"></section>
+<section id="info"><img class="section-img" src="assets/Asset and Elements/Info.png"></section>
+<footer class="footer"><img src="assets/Asset and Elements/Footer.png"></footer>
+</main><script>
+document.querySelectorAll('.navlinks a[href]').forEach(a=>{a.addEventListener('click',e=>{const u=new URL(a.href,location.href);if(u.pathname!==location.pathname){e.preventDefault();document.body.classList.add('page-leaving');setTimeout(()=>location.href=a.href,180)}})});
+</script></body></html>

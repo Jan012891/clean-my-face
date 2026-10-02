@@ -1,0 +1,18 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fafaf7;font-family:Poppins,Arial,sans-serif;color:#222}.page{width:100%;overflow:hidden}.navwrap{position:absolute;z-index:10;top:28px;left:50%;transform:translateX(-50%);width:min(94.5%,1361px)}.navimg{width:100%;display:block}.navlinks{position:absolute;inset:0}.navlinks a{position:absolute;top:0;height:100%;display:block}.logo-link{left:3.5%;width:16%}.home{left:30.5%;width:6%}.purpose{left:38%;width:9%}.plump{left:49%;width:8.5%}.stay{left:59%;width:8%}.routine{left:69%;width:7.5%}.shop{left:79%;width:17%}.section-img{display:block;width:100%;height:auto}.hero{position:relative}.hero .section-img{width:100%}.content-section{width:100%;display:flex;justify-content:center;background:#fafaf7}.content-section img{display:block;width:100%;height:auto}.cards{padding:30px 5.5%;display:flex;flex-direction:column;gap:28px;background:#fafaf7}.card{border-radius:42px;overflow:hidden;padding:20px 24px;background:linear-gradient(135deg,#eaf5ff,#fff 50%,#e8f4ff)}.card.green{background:linear-gradient(135deg,#edf8dc,#fff 50%,#edf8dc)}.card img{width:100%;display:block}.lineup{padding:26px 0 20px}.footer img{display:block;width:100%}@media(max-width:700px){.navwrap{top:12px}.cards{padding:18px 4%;gap:18px}.card{border-radius:24px;padding:10px}.lineup{padding:12px 0}.navlinks a{top:-5px;height:calc(100% + 10px)}}
+
+
+/* Active navbar state + page transition */
+body{animation:pageFadeIn .55s ease both}
+@keyframes pageFadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+body.page-leaving{animation:none;opacity:0;transition:opacity .22s ease}
+.navlinks a.nav-active::after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Poppins,Arial,sans-serif;font-weight:800;color:#7398c5;white-space:nowrap;pointer-events:none;font-size:clamp(7px,.58vw,11px);line-height:1}
+.navlinks a.home.nav-active::after{content:"Home"}
+.navlinks a.plump.nav-active::after{content:"Plump It Up"}
+.navlinks a.stay.nav-active::after{content:"Stay Clear"}
+.navlinks a.nav-active{background:#fff;border-radius:0}
+
+/* V7: page-aware navbar typography */
+.navlinks a.home,.navlinks a.purpose,.navlinks a.plump,.navlinks a.stay,.navlinks a.routine{background:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;border-radius:0}
+.navlinks a.home::after,.navlinks a.purpose::after,.navlinks a.plump::after,.navlinks a.stay::after,.navlinks a.routine::after{font-family:Poppins,Arial,sans-serif;font-weight:400;color:#7398c5;white-space:nowrap;line-height:1;font-size:clamp(6px,.48vw,9px);transition:font-size .18s ease,font-weight .18s ease}
+.navlinks a.home::after{content:"Home"}.navlinks a.purpose::after{content:"Our Purpose"}.navlinks a.plump::after{content:"Plump It Up"}.navlinks a.stay::after{content:"Stay Clear"}.navlinks a.routine::after{content:"Routine"}
+.navlinks a.home.nav-active::after,.navlinks a.plump.nav-active::after,.navlinks a.stay.nav-active::after{font-weight:700;font-size:clamp(7px,.58vw,11px);position:static;display:block}
